@@ -1,0 +1,64 @@
+#personal_style_forms_wallpaper_container .personal_style_wallpaper_choise {
+	float: left;
+	width: 120px;
+	height: 120px;
+	vertical-align: top;
+}
+
+#personal_style_forms_wallpaper_container .personal_style_wallpaper_choise input[type='radio'] {
+	float: left;
+	margin-bottom: 100px;
+}
+
+#personal_style_forms_wallpaper_container .personal_style_wallpaper_choise img {
+	max-width: 90px;
+	max-height: 90px;
+	vertical-align: top;
+}
+
+.personal_style_wallpapers
+{
+	display: none;
+	border: 1px solid #DDDDDD;
+	width: 671px;
+	padding: 2px;
+}
+
+#personal_style_wallpaper_selectable .ui-selecting,
+#personal_style_wallpaper_selectable .ui-selected
+{
+	background: #DDDDDD;
+	border: 1px #000000 solid;
+}
+
+#personal_style_wallpaper_selectable 
+{
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0;
+}
+
+#personal_style_wallpaper_selectable li
+{
+	float: left;
+	font-size: 12px;
+    height: 118px;
+    margin: 3px;
+    padding: 0.4em;
+    width: 150px;
+    border: 1px #DDDDDD solid;
+    cursor: pointer;
+    text-align: center;
+}
+
+#personal_style_wallpaper_selectable li > img,
+#personal_style_wallpaper_selectable li > a img
+{
+	max-height: 100px;
+    max-width: 150px;
+}
+
+#personal_style_fancybox_form
+{
+	font-size: 11px;
+}
