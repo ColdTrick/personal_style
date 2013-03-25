@@ -36,11 +36,8 @@
 	}
 
 	function personal_style_page_handler($page) {
-		switch($page[0]) {	
-			default:
-				include(dirname(__FILE__) . '/pages/style.php');
-				break;
-		}
+		include(dirname(__FILE__) . '/pages/style.php');
+		return true;
 	}
 
 	elgg_register_event_handler('init', 'system', 'personal_style_init');

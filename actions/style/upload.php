@@ -7,7 +7,8 @@
 	$wallpaper 	= get_input('personal_style_selected_wallpaper');
 	$type 		= get_input('personal_style_selected_type', 'custom');
 	$repeat 	= get_input('personal_style_display_type');
-
+	$file_error = false;
+	
 	if ((isset($_FILES['wallpaper'])) && (substr_count($_FILES['wallpaper']['type'],'image/'))) {	
 		$new_filename = $CONFIG->dataroot . "personal_style_wallpapers/{$user_guid}.jpg";
 		try {
@@ -20,7 +21,7 @@
 				$file_error = true;
 			}
 
-			$resized = get_resized_image_from_uploaded_file('wallpaper', 2000, 2000, $size_info['square'], $size_info['upscale']);
+			$resized = get_resized_image_from_uploaded_file('wallpaper', 2000, 2000, false, false);
 			if(($write = fwrite($file_handler, $resized)) === false) {
 				$file_error = true;
 			}
